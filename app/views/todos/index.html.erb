@@ -1,1 +1,10 @@
 <h1>Todo List App</h1>
+
+<div>
+  <% @todos.each do |todo| %>
+    <p>
+      title: <%= todo.title %> <br>
+      details: <%= todo.details %>
+    </p>
+  <% end %>
+</div>
