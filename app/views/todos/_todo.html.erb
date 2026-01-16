@@ -1,5 +1,6 @@
 <p style="border: solid gray 1px;">
   title: <%= todo.title %> <br>
   details: <%= todo.details %> <br>
-  <%= link_to 'Delete todo', todo, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%= link_to "Edit", [:edit, todo] %> |
+  <%= link_to 'Delete', todo, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
 </p>
