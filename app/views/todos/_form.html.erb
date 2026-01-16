@@ -1,0 +1,18 @@
+<%= form_with model: todo do |form|  %>
+
+  <div>
+    <%= form.label :title %> <br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :detais %> <br>
+    <%= form.text_area :details %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
