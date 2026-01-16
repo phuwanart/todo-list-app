@@ -40,6 +40,6 @@ class TodosController < ApplicationController
   end
 
   def todo_params
-    params.expect(todo: [ :title, :details, :completed ])
+    params.expect(todo: [ :title, :details, :completed, :priority ])
   end
 end

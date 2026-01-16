@@ -1,6 +1,11 @@
 <%= form_with model: todo do |form|  %>
 
   <div>
+    <%= form.label :priority %> <br>
+    <%= form.select :priority, [["Low", :low], ["Medium", :medium], ["High", :high]] %>
+  </div>
+
+  <div>
     <%= form.label :title %> <br>
     <%= form.text_field :title %>
   </div>
