@@ -3,10 +3,5 @@
 <%= link_to "New todo", new_todo_path %>
 
 <div>
-  <% @todos.each do |todo| %>
-    <p>
-      title: <%= todo.title %> <br>
-      details: <%= todo.details %>
-    </p>
-  <% end %>
+  <%= render @todos %>
 </div>
