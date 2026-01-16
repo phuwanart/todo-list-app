@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :set_todo, only: %i[edit update destroy]
 
   def index
-    @todos = Todo.all
+    @todos = Todo.incompleted
   end
 
   def new
@@ -39,6 +39,6 @@ class TodosController < ApplicationController
   end
 
   def todo_params
-    params.expect(todo: [ :title, :details ])
+    params.expect(todo: [ :title, :details, :completed ])
   end
 end
