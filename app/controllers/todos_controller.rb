@@ -2,8 +2,8 @@ class TodosController < ApplicationController
   before_action :set_todo, only: %i[edit update destroy]
 
   def index
-    @incompleted_todos = Todo.incompleted
-    @completed_todos  = Todo.completed
+    @incompleted_todos = Todo.incompleted.order(priority: :desc)
+    @completed_todos  = Todo.completed.order(priority: :desc)
   end
 
   def new
